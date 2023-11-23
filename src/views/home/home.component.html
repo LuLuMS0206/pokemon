@@ -1,0 +1,40 @@
+<!-- SECTION TYPES OF POKEMON -->
+<div class="background">
+    
+
+<div class="content-max found">
+    <!-- SECTION LOGO/SEARCH POKEMON -->
+    <div class="section-buscador">
+        <img class="imagen" src="./../../assets/imagenes/612ce4761b9679000402af1c.png" alt="" />
+
+        <div class="content-search">
+            <span class="material-symbols-outlined search"> search </span>
+            <input class="buscador" type="text" [(ngModel)]="searchTerm" placeholder="Búsqueda">
+        </div>
+    </div>
+    <!-- END SECTION LOGO/SEARCH POKEMON -->
+
+    <!-- SECTION CARDS POKEMON -->
+    <div class="card" *ngFor="let pokemon of pokemons | search: searchTerm" (click)="obtenerPokemon(pokemon)">
+        <!-- IMAGEN POKEMON -->
+        <div class="imagen-pokemon">
+            <img class="imagen" [src]="pokemon.imagen" alt="" />
+        </div>
+        <!-- END IMAGEN POKEMON -->
+
+        <div class="name-pokemon">
+            {{ pokemon.nombre }}
+        </div>
+
+        <div class="type-pokemon">
+            <span class="type">Tipo:</span> {{ pokemon.tipo }}
+        </div>
+
+        <div class="ability-pokemon">
+            <span class="ability">Habilidad:</span> {{ pokemon.habilidades }}
+        </div>
+    </div>
+    <!-- END SECTION CARDS POKEMON -->
+</div>
+<!-- END SECTION TYPES OF POKEMON -->
+</div>

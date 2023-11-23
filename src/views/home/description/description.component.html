@@ -1,0 +1,24 @@
+<div class="content-max">
+
+
+    <img class="imagen" src="./../../assets/imagenes/612ce4761b9679000402af1c.png" alt="" />
+
+    <button class="button-description" (click)="obtenerAtras(atras)">
+        <span class="text-button">Atrás</span>
+    </button>
+
+    <div class="card-description">
+        <div class="name-description">
+            {{pokemonData.nombre}}
+        </div>
+
+        <div class="imagen-description">
+            <img class="img" [src]="pokemonData.imagen" alt="">
+        </div>
+
+        <div class="description-pokemon">
+            {{pokemonData.descripcion}}
+        </div>
+    </div>
+
+</div>
